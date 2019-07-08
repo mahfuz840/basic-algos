@@ -10,7 +10,7 @@ int main()
     int n = sizeof(arr)/sizeof(arr[0]);
     quicksort(arr, 0, n-1);
 
-    for(int i = 0; i < 5; i++)
+    for(int i = 0; i < n; i++)
         printf("%d ", arr[i]);
 }
 
@@ -36,8 +36,6 @@ int partition(int arr[], int low, int high)
         if(arr[j] <= pivot)
         {
             i++;
-            printf("swapping i = %d j = %d low=%d high=%d\n",i,j,low,high);
-
             my_swap(&arr[i], &arr[j]);
         }
     }
